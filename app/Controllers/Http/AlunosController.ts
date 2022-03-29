@@ -63,7 +63,7 @@ export default class AlunosController {
         console.log(JSON.stringify(aluno, ['id', 'nome', 'curso'], 0))
     
         return{
-          message: 'Atualizado com Sucesso',
+          message: 'Atualizado com Sucesso!',
           data: aluno,
         }
     }
