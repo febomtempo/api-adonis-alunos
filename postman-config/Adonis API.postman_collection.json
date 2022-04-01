@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "13c45a90-2adf-491a-9600-97fd7c0f2059",
+		"name": "Adonis API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Moments",
+			"item": [
+				{
+					"name": "Insert a Moment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "VAI SER DELETADO",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "SERÁ DELETADO",
+									"type": "default"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Felipe/Desktop/1_EV0GM5-4hB9fAqmNpPPHcQ.png"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/moments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"moments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ALL Moments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/moments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"moments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Moment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/moments/4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"moments",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Moment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/moments/3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"moments",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Moment",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "titulo atualizado",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "descricao atualizada",
+									"type": "default"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Felipe/Desktop/1200px-Node.js_logo.svg.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/moments/4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"moments",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Add a Comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Maria\",\r\n    \"text\": \"Não gostei, 2 estrelas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/moments/4/comments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"moments",
+								"4",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rota de teste",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:3333/api",
+			"type": "default"
+		}
+	]
+}
